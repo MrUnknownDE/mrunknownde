@@ -1,4 +1,4 @@
-![Profil-Banner](https://i.pinimg.com/originals/8b/61/c1/8b61c154e7f44146727a32c05a7539d9.gif)
+<div style="text-align:center"><img src="https://i.pinimg.com/originals/8b/61/c1/8b61c154e7f44146727a32c05a7539d9.gif" /></div>
 # Hi there 👋
 ![MrUnknownDE's GitHub stats](https://github-readme-stats.vercel.app/api?username=mrunknownde&show_icons=true&theme=radical)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mrunknownde&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
