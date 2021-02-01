@@ -1,7 +1,8 @@
 <h1 align="center">Hi 👋, I'm Johannes</h1>
 <h3 align="center">20 • Hobby System Engineering • Nurse assistants</h3>
 
-<p align="left"> <a href="https://twitter.com/mrunknownde" target="blank"><img src="https://img.shields.io/twitter/follow/mrunknownde?logo=twitter&style=for-the-badge" alt="mrunknownde" /></a> </p>
+<p align="left"> <a href="https://twitter.com/mrunknownde" target="blank"><img src="https://img.shields.io/twitter/follow/mrunknownde?logo=twitter&style=for-the-badge" alt="mrunknownde" /></a> <br/>
+<a href="https://discord.gg/wgnP5wS" target="blank"><img src="https://img.shields.io/discord/653648673133166622" alt="unknownnetwork"></a> </p>
 
 - 🔭 I’m currently working on [sysLUL](https://github.com/syslul)
 
