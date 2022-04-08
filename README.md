@@ -8,7 +8,7 @@
 
 - 🌱 I’m currently learning **Nurse**
 
-- 🤝 I’m looking for help with [penol](https://github.com/penol)
+- 🤝 I’m looking for help with [Hyatlas](https://github.com/Hyatlas)
 
 - 💬 Ask me about **anime, deep music, network, open-source solution, linux, hosting and (hard-)systems**
 
