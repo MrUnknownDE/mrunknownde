@@ -3,7 +3,7 @@
 </div>  
   
 
-### <div align="center">I'm Johannes, a full-time full-stack freelance Noob 👨‍💻 working remotely since 2006 🚀</div>  
+### <div align="center">I'm Johannes, a full-time & full-stack & freelance Noob 👨‍💻 working remotely since 2006 🚀</div>  
   
 
 - 🔭 I’m currently working on [sysLUL.de](https://github.com/syslul)  
