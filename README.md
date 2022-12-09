@@ -4,7 +4,13 @@
   
   
 # 💫 About Me:
-I'm Johannes, a full-time & full-stack & freelance Noob 👨‍💻 working remotely since 2006 🚀<br>🔭 I’m currently working on sysLUL.de<br>🤝 I’m looking for help with Windows Administration<br>🌱 I’m currently learning Nurse<br>💬 Ask me about anything related to anime, deep music, network, open-source solution, linux, hosting and (hard-)systems<br>⚡ Fun fact I have all System at Home :)
+👨‍💻I'm Johannes, a full-time & full-stack & freelance Noob <br>
+🚀working remotely since 2006 <br>
+🔭 I’m currently working on sysLUL.de<br>
+🤝 I’m looking for help with Windows Administration<br>
+🌱 I’m currently learning Nurse<br>
+💬 Ask me about anything related to anime, deep music, network, open-source solution, linux, hosting and (hard-)systems<br>
+⚡ Fun fact I have all System at Home :)
 
 
 ## 🌐 Socials:
