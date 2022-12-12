@@ -19,18 +19,25 @@
 # 💻 Tech Stack:
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=plastic&logo=html5&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=plastic&logo=Cloudflare&logoColor=white) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=plastic&logo=apache&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=plastic&logo=mariadb&logoColor=white) ![Adobe After Effects](https://img.shields.io/badge/Adobe%20After%20Effects-9999FF.svg?style=plastic&logo=Adobe%20After%20Effects&logoColor=white) ![Adobe Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-9999FF.svg?style=plastic&logo=Adobe%20Premiere%20Pro&logoColor=white) ![Adobe Photoshop](https://img.shields.io/badge/adobephotoshop-%2331A8FF.svg?style=plastic&logo=adobephotoshop&logoColor=white) ![Adobe Audition](https://img.shields.io/badge/Adobe%20Audition-9999FF.svg?style=plastic&logo=Adobe%20Audition&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=plastic&logo=docker&logoColor=white) ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=plastic&logo=Raspberry-Pi) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=plastic&logo=postman&logoColor=white) ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=plastic&logo=Trello&logoColor=white)
 # 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=MrUnknownDE&theme=radical&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=MrUnknownDE&theme=radical&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=MrUnknownDE&theme=radical&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+
+<div style="text-align: center">
+<img src="https://github-readme-stats.vercel.app/api?username=MrUnknownDE&theme=radical&hide_border=false&include_all_commits=true&count_private=true"></img>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=MrUnknownDE&theme=radical&hide_border=false"></img>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MrUnknownDE&theme=radical&hide_border=false&include_all_commits=true&count_private=true&layout=compact"></img>
+
+</div>
 
 ## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=MrUnknownDE&theme=gruvbox&no-frame=false&no-bg=true&margin-w=4)
+<div style="text-align: left">
+<img src="https://github-profile-trophy.vercel.app/?username=MrUnknownDE&theme=gruvbox&no-frame=false&no-bg=true&margin-w=4"></img>
+</div>
 
 ### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
-
-### 😂 Random Dev Meme
-<img src="https://random-memer.herokuapp.com/" width="512px"/>
+<div style="text-align: center">
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical"></img>
+</div>
 
 ---
-[![](https://visitcount.itsvg.in/api?id=MrUnknownDE&icon=0&color=0)](https://visitcount.itsvg.in)
+<div style="text-align: right">
+<img src="https://visitcount.itsvg.in/api?id=MrUnknownDE&icon=0&color=0"></img>
+</div>
