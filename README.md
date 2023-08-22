@@ -4,11 +4,11 @@
   
   
 # 💫 About Me:
-👨‍💻I'm Johannes, a full-time & full-stack & freelance Noob <br>
+👨‍💻I'm Johannes, a full-time & full-stack Noob <br>
 🚀working remotely since 2006 <br>
-🔭 I’m currently working on sysLUL.de<br>
+🔭 I’m currently working on <i>TBA</i> <br>
 🤝 I’m looking for help with Windows Administration<br>
-🌱 I’m currently learning Nurse<br>
+🌱 I’m currently learning system administrator<br>
 💬 Ask me about anything related to anime, deep music, network, open-source solution, linux, hosting and (hard-)systems<br>
 ⚡ Fun fact I have all System at Home :)
 
@@ -38,3 +38,7 @@ Spotify: [![spotify](https://api.statusbadges.me/badge/spotify/15507632361268838
 <div style="text-align: left">
 <img src="https://github-profile-trophy.vercel.app/?username=MrUnknownDE&theme=gruvbox&no-frame=false&no-bg=true&margin-w=4"></img>
 </div>
+
+# 🤹‍♂️Community's
+<a href="https://dampfschiff-enterprise.de/"><img width="256" src="https://monkatos.com/u/rKaglD.svg"></img></a>
+<a href="https://pieperjugend.de/" ><img width="256" src="https://monkatos.com/u/YLhlsH.png"></img></a>
