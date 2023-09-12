@@ -42,3 +42,4 @@ Spotify: [![spotify](https://api.statusbadges.me/badge/spotify/15507632361268838
 # 🤹‍♂️Community's
 <a href="https://dampfschiff-enterprise.de/"><img width="256" src="https://monkatos.com/u/rKaglD.svg"></img></a>
 <a href="https://pieperjugend.de/" ><img width="256" src="https://monkatos.com/u/YLhlsH.png"></img></a>
+<a href="https://kasmudan.de/" ><img width="96" src="https://monkatos.com/u/tdUFN1.png"></img></a>
