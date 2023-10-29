@@ -6,9 +6,9 @@
 # 💫 About Me:
 👨‍💻I'm Johannes, a full-time & full-stack Noob <br>
 🚀working remotely since 2006 <br>
-🔭 I’m currently working on <i>TBA</i> <br>
+🔭 I’m currently working on Netstack GmbH <br>
 🤝 I’m looking for help with Windows Administration<br>
-🌱 I’m currently learning system administrator<br>
+🌱 I’m currently learning system administrator & networking<br>
 💬 Ask me about anything related to anime, deep music, network, open-source solution, linux, hosting and (hard-)systems<br>
 ⚡ Fun fact I have all System at Home :)
 
