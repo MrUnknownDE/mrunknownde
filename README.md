@@ -4,7 +4,7 @@
   
   
 # 💫 About Me:
-👨‍💻I'm Johannes, a System-Administration - First Level Support<br>
+👨‍💻I'm Johannes, a System-Administrator<br>
 🚀working remotely since 2023 <br>
 🔭 I’m currently working on Netstack GmbH <br>
 🤝 I’m looking for help with Windows Administration<br>
