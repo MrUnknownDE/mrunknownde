@@ -4,12 +4,12 @@
   
   
 # 💫 About Me:
-👨‍💻I'm Johannes, a full-time & full-stack Noob <br>
-🚀working remotely since 2006 <br>
+👨‍💻I'm Johannes, a System-Administration - First Level Support<br>
+🚀working remotely since 2023 <br>
 🔭 I’m currently working on Netstack GmbH <br>
 🤝 I’m looking for help with Windows Administration<br>
 🌱 I’m currently learning system administrator & networking<br>
-💬 Ask me about anything related to anime, deep music, network, open-source solution, linux, hosting and (hard-)systems<br>
+💬 Ask me about anything related to anime, deep music, linux, open-source solution, Cloud or on-premise solution<br>
 ⚡ Fun fact I have all System at Home :)
 
 
