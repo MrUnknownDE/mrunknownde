@@ -9,8 +9,8 @@
 🔭 I’m currently working on Netstack GmbH <br>
 🤝 I'm looking for help with Windows administration<br>
 🌱 I'm currently studying Networking<br>
-💬 Ask me about anything related to anime, deep music, linux, open-source solution, Cloud or on-premise solution<br>
-⚡ Fun fact I have all System at Home :)
+💬 I really enjoy talking about anime, deep music, Linux, open source, cloud or on-premises<br>
+⚡ Fun fact - I have an old NasDelux and a Netgear EasyNAS just lying around at home, haha xD
 
 
 ## 🌐 Socials:
