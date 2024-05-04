@@ -40,6 +40,7 @@ Spotify: [![spotify](https://api.statusbadges.me/badge/spotify/15507632361268838
 </div>
 
 # 🤹‍♂️Community's
-<a href="https://dampfschiff-enterprise.de/"><img width="256" src="https://monkatos.com/u/rKaglD.svg"></img></a>
-<a href="https://pieperjugend.de/" ><img width="256" src="https://monkatos.com/u/YLhlsH.png"></img></a>
-<a href="https://kasmudan.de/" ><img width="96" src="https://monkatos.com/u/tdUFN1.png"></img></a>
+<a href="https://dampfschiff-enterprise.de/"><img width="256" src="https://a.mrunk.de/24uhOF.svg"></img></a>
+<a href="https://pieperjugend.de/" ><img width="256" src="https://a.mrunk.de/2431wO.png"></img></a>
+<a href="https://kasmudan.de/" ><img width="96" src="https://a.mrunk.de/24vpE8.png"></img></a>
+<a href="https://hidevr.de/" ><img width="96" src="https://a.mrunk.de/24fm0a.png"></img></a>
