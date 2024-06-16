@@ -17,7 +17,7 @@
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.mrunknown.de) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.mrunknown.de) [![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?logo=TikTok&logoColor=white)](https://tiktok.mrunknown.de) [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.mrunknown.de) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.mrunknown.de) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.mrunknown.de)
 
 
-## 📡 Realtime-Status
+## 📡 Realtime-Status - *currently broken*
 Discord: ![status](https://api.statusbadges.me/badge/status/155076323612688384?simple=true) ![playing](https://api.statusbadges.me/badge/playing/155076323612688384) <br>
 VS Code: ![vscode](https://api.statusbadges.me/badge/vscode/155076323612688384)<br>
 Spotify: [![spotify](https://api.statusbadges.me/badge/spotify/155076323612688384)](https://api.statusbadges.me/openspotify/155076323612688384)<br>
