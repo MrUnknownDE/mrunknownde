@@ -1,90 +1,160 @@
-name: Metrics
+# Name des Workflows, der in der GitHub Actions UI angezeigt wird
+name: GitHub Profil Metriken
+
 on:
-  # Schedule daily updates
-  schedule: [{cron: "0 0 * * *"}]
-  # (optional) Run workflow manually
+  # Trigger: Führt den Workflow nach einem Zeitplan aus (z.B. alle 12 Stunden)
+  schedule:
+    - cron: '0 */12 * * *' # Läuft um 00:00 und 12:00 UTC
+
+  # Trigger: Ermöglicht das manuelle Starten des Workflows über die Actions-Seite
   workflow_dispatch:
-  # (optional) Run workflow when pushing on master/main
-  push: {branches: ["master", "main"]}
+
+  # Trigger: Führt den Workflow bei jedem Push zum main-Branch aus (optional)
+  # push:
+  #   branches:
+  #     - main # Oder dein Standard-Branch (z.B. master)
+
 jobs:
-  github-metrics:
+  # Job-ID (kann beliebig sein)
+  metrics:
+    # Betriebssystem für den Runner
     runs-on: ubuntu-latest
-    environment: 
-      name: production
+    # Berechtigungen für den Job (nur nötig, wenn GITHUB_TOKEN verwendet wird UND Ergebnisse committet werden sollen)
+    # Wenn du ein PAT (METRICS_TOKEN) verwendest, sind diese hier nicht unbedingt für die Metrics-Action selbst nötig,
+    # aber 'contents: write' wird benötigt, damit der Workflow Änderungen committen kann.
     permissions:
       contents: write
+
     steps:
-      - uses: lowlighter/metrics@latest
+      # Schritt 1: Code auschecken
+      # Dieser Schritt ist notwendig, damit der Workflow die generierten Metrik-Dateien
+      # in dein Repository committen kann.
+      - name: Code auschecken
+        uses: actions/checkout@v4
+
+      # Schritt 2: Metriken generieren mit lowlighter/metrics
+      - name: GitHub Metriken generieren
+        # Verwendet die neueste Version der lowlighter/metrics Action
+        uses: lowlighter/metrics@latest
         with:
+          # === Wichtige Konfiguration ===
+
+          # Dein GitHub-Benutzername
+          # Ersetze 'DEIN_BENUTZERNAME' mit deinem tatsächlichen GitHub-Benutzernamen
+          user: DEIN_BENUTZERNAME
+
+          # Dein Personal Access Token (PAT), das du als Secret gespeichert hast.
+          # Dies wird für den Zugriff auf die GitHub API benötigt, um deine Daten abzurufen.
+          # Alternativ: ${{ secrets.GITHUB_TOKEN }} - hat aber Einschränkungen (Rate Limits, weniger Datenzugriff).
+          # Die Verwendung eines PAT wird dringend empfohlen.
           token: ${{ secrets.METRICS_TOKEN }}
+
+          # === Layout und allgemeine Optionen ===
+
+          # Basis-Layout-Vorlage (z.B. classic, terminal, rsm)
+          template: classic
+
+          # Welche Hauptsektionen sollen angezeigt werden? (Komma-getrennt)
+          # Verfügbare Sektionen: header, activity, community, repositories.list, code, lines, traffic,
+          # languages, followup, discussions, notable, people.followers, people.following, etc.
+          base: header, activity, community, repositories.list, code, lines, traffic, languages, followup, people.followers
+
+          # Zeitzone für Datums- und Zeitangaben (z.B. Europe/Berlin, America/New_York)
           config_timezone: Europe/Berlin
-          base: header
-          plugin_isocalendar: yes
+
+          # Anzeigeart (z.B. large, normal, condensed) - beeinflusst die Größe/Dichte der Darstellung
+          config_display: large
+
+          # Ausgabeformat (svg oder json)
+          config_output: svg
+
+          # === Plugin-Konfigurationen (Beispiele) ===
+          # Aktiviere und konfiguriere die Plugins, die du verwenden möchtest.
+          # Setze den Wert auf 'yes', um ein Plugin zu aktivieren.
+
+          # Aktivitäts-Plugin
+          plugin_activity: yes
+          plugin_activity_limit: 5             # Max. Anzahl angezeigter Aktivitäten
+          plugin_activity_days: 14             # Zeitraum der Aktivitäten in Tagen (0 = unbegrenzt)
+          plugin_activity_filter: all          # Welche Aktivitäten anzeigen (all, push, pr, issue, review, comment, ...)
+          plugin_activity_timestamps: yes      # Zeitstempel anzeigen?
+          plugin_activity_ignored: ''          # Ignorierte Benutzer (Komma-getrennt)
+
+          # Sprachen-Plugin
           plugin_languages: yes
-          plugin_stars: yes
-          config_order: base.header, isocalendar, languages, stars
+          plugin_languages_limit: 8            # Max. Anzahl angezeigter Sprachen
+          plugin_languages_threshold: 0%       # Mindestprozentsatz für eine Sprache (z.B. '2%')
+          plugin_languages_colors: github      # Farbschema (github, random, ...)
+          plugin_languages_sections: most-used # Welche Sektionen (most-used, recently-used)
+          plugin_languages_details: bytes-size, percentage # Details anzeigen (bytes-size, percentage)
+          plugin_languages_ignored: html, css  # Ignorierte Sprachen (Komma-getrennt)
 
+          # Codezeilen-Plugin
+          plugin_lines: yes
+          plugin_lines_history: yes            # Verlauf der Codezeilen anzeigen?
+          plugin_lines_sections: base          # Sektionen (base, history)
+          plugin_lines_ignored: ''             # Ignorierte Repositories
 
-name: Compact display
-uses: lowlighter/metrics@latest
-with:
-  filename: metrics.plugin.achievements.compact.svg
-  token: ${{ secrets.METRICS_TOKEN }}
-  base: ""
-  plugin_achievements: yes
-  plugin_achievements_only: >-
-    polyglot, stargazer, sponsor, deployer, member, maintainer, developer,
-    scripter, packager, explorer, infographile, manager
-  plugin_achievements_display: compact
-  plugin_achievements_threshold: X
+          # Traffic-Plugin (benötigt PAT mit 'repo' Scope)
+          plugin_traffic: yes
 
-name: Full history calendar
-uses: lowlighter/metrics@latest
-with:
-  filename: metrics.plugin.calendar.full.svg
-  token: ${{ secrets.METRICS_TOKEN }}
-  base: ""
-  plugin_calendar: yes
-  plugin_calendar_limit: 0
+          # Isokalender-Plugin (Beitragskalender)
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year # Dauer (half-year, full-year)
 
-name: Most used (with details)
-uses: lowlighter/metrics@latest
-with:
-  filename: metrics.plugin.languages.details.svg
-  token: ${{ secrets.METRICS_TOKEN }}
-  base: ""
-  plugin_languages: yes
-  plugin_languages_ignored: >-
-    html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell,
-    gnuplot
-  plugin_languages_details: bytes-size, percentage
-  plugin_languages_limit: 4
+          # Gewohnheiten-Plugin (Habits)
+          plugin_habits: yes
+          plugin_habits_from: 200              # Anzahl Tage für die Analyse (max. 1 Jahr = 365)
+          plugin_habits_days: 14               # Anzahl Tage für aktuelle Gewohnheiten
+          plugin_habits_charts: yes            # Diagramme anzeigen? (commits, issues, prs, reviews)
+          plugin_habits_trim: yes              # Leere Tage/Wochen am Anfang/Ende entfernen?
 
-  name: Repositories traffic
-uses: lowlighter/metrics@latest
-with:
-  filename: metrics.plugin.traffic.svg
-  token: ${{ secrets.METRICS_TOKEN }}
-  base: repositories
-  plugin_traffic: yes
+          # Follow-up-Plugin (Issues, PRs)
+          plugin_followup: yes
+          plugin_followup_sections: user       # Sektionen (user, repositories)
+          plugin_followup_archived: no         # Archivierte Repos einschließen?
 
-  name: Icons
-uses: lowlighter/metrics@latest
-with:
-  filename: metrics.plugin.topics.icons.svg
-  token: NOT_NEEDED
-  base: ""
-  plugin_topics: yes
-  plugin_topics_limit: 0
-  plugin_topics_mode: icons
+          # Personen-Plugin (Follower, Following)
+          plugin_people: yes
+          plugin_people_types: followers       # Angezeigte Typen (followers, following, starred)
+          plugin_people_limit: 24              # Max. Anzahl Personen
+          plugin_people_size: 28               # Avatar-Größe in Pixeln
+          plugin_people_shuffle: yes           # Reihenfolge zufällig mischen?
 
+          # Repositories-Plugin
+          plugin_repositories: yes
+          plugin_repositories_order: featured, pinned, starred, random # Reihenfolge der Repos
+          plugin_repositories_limit: 4         # Limit für angezeigte Repos in der Liste
 
-name: Youtube Music - Recently listed
-uses: lowlighter/metrics@latest
-with:
-  token: NOT_NEEDED
-  base: ""
-  plugin_music_token: ${{ secrets.YOUTUBE_MUSIC_TOKENS }}
-  plugin_music: yes
-  plugin_music_mode: recent
-  plugin_music_provider: youtube
+          # Stargazers-Plugin (zeigt einen Graph der Sterne über Zeit)
+          plugin_stargazers: yes
+          plugin_stargazers_charts_type: classic # Typ des Graphen (classic, modern)
+
+          # === Ausgabe-Konfiguration ===
+
+          # Pfad zur Ausgabedatei (oder mehrere, Komma-getrennt).
+          # Diese Datei wird im Repository gespeichert.
+          output_path: github-metrics.svg
+
+          # Aktion nach der Generierung:
+          # 'commit': Committet die generierte(n) Datei(en) direkt ins Repository.
+          # 'none': Macht nichts (nützlich, wenn du den Commit selbst in einem späteren Schritt machen willst).
+          output_action: commit
+
+          # Optionale Commit-Nachricht (Standard ist "chore: update metrics")
+          # commit_message: "docs: update profile metrics"
+
+          # Optionaler Commit-Autor (Standard ist der GitHub Actions Bot)
+          # commit_author: Your Name <your-email@example.com>
+
+          # --- Beispiel für mehrere Ausgabedateien ---
+          # Wenn du verschiedene Metriken in separaten SVGs haben möchtest:
+          # 1. Definiere mehrere Pfade in 'output_path'
+          #    output_path: metrics.base.svg, metrics.languages.svg, metrics.activity.svg
+          # 2. Weise jedem Plugin seine Ausgabedatei zu mit 'plugin_X_output'
+          #    plugin_languages: yes
+          #    plugin_languages_output: metrics.languages.svg
+          #    plugin_activity: yes
+          #    plugin_activity_output: metrics.activity.svg
+          # 3. Die 'base' Sektionen gehen standardmäßig in die erste Datei in 'output_path' (metrics.base.svg)
+          #    base: header, community, repositories.list # Nur diese für die Basis-SVG
