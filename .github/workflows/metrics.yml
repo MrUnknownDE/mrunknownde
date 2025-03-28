@@ -24,6 +24,9 @@ jobs:
     # aber 'contents: write' wird benötigt, damit der Workflow Änderungen committen kann.
     permissions:
       contents: write
+    
+    environment: 
+      name: production
 
     steps:
       # Schritt 1: Code auschecken
