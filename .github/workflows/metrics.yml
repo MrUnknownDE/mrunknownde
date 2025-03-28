@@ -41,7 +41,7 @@ jobs:
 
           # Dein GitHub-Benutzername
           # Ersetze 'DEIN_BENUTZERNAME' mit deinem tatsächlichen GitHub-Benutzernamen
-          user: DEIN_BENUTZERNAME
+          user: MrUnknownDE
 
           # Dein Personal Access Token (PAT), das du als Secret gespeichert hast.
           # Dies wird für den Zugriff auf die GitHub API benötigt, um deine Daten abzurufen.
@@ -129,6 +129,14 @@ jobs:
           # Stargazers-Plugin (zeigt einen Graph der Sterne über Zeit)
           plugin_stargazers: yes
           plugin_stargazers_charts_type: classic # Typ des Graphen (classic, modern)
+
+          # Musik-Plugin (YouTube Music)
+          plugin_music: yes
+          plugin_music_provider: youtube         # Wählt YouTube Music als Anbieter
+          plugin_music_token: ${{ secrets.YOUTUBE_MUSIC_TOKENS }} # Dein gespeicherter Cookie-Header
+          plugin_music_limit: 5                  # Max. Anzahl anzuzeigender Titel
+          plugin_music_played_at: yes            # Zeigt an, wann der Titel gehört wurde? (yes/no)
+          # plugin_music_ignored: ""             # Künstler, die ignoriert werden sollen (Komma-getrennt)
 
           # === Ausgabe-Konfiguration ===
 
