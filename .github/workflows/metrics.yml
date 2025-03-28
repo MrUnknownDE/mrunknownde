@@ -139,6 +139,7 @@ jobs:
           plugin_music_token: ${{ secrets.YOUTUBE_MUSIC_TOKENS }} # Dein gespeicherter Cookie-Header
           plugin_music_limit: 5                  # Max. Anzahl anzuzeigender Titel
           plugin_music_played_at: yes            # Zeigt an, wann der Titel gehört wurde? (yes/no)
+          plugin_music_mode: recent              # Explizit hinzufügen
           # plugin_music_ignored: ""             # Künstler, die ignoriert werden sollen (Komma-getrennt)
 
           # === Ausgabe-Konfiguration ===
