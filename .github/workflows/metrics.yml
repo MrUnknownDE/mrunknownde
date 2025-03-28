@@ -10,9 +10,9 @@ on:
   workflow_dispatch:
 
   # Trigger: Führt den Workflow bei jedem Push zum main-Branch aus (optional)
-  # push:
-  #   branches:
-  #     - main # Oder dein Standard-Branch (z.B. master)
+  push:
+    branches:
+      - main # Oder dein Standard-Branch (z.B. master)
 
 jobs:
   # Job-ID (kann beliebig sein)
