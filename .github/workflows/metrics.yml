@@ -4,7 +4,7 @@ name: GitHub Profil Metriken
 on:
   # Trigger: Führt den Workflow nach einem Zeitplan aus (z.B. alle 12 Stunden)
   schedule:
-    - cron: '0 */12 * * *' # Läuft um 00:00 und 12:00 UTC
+    - cron: '0 */6 * * *' # Läuft um 00:00 und 12:00 UTC
 
   # Trigger: Ermöglicht das manuelle Starten des Workflows über die Actions-Seite
   workflow_dispatch:
