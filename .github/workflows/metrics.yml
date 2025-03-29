@@ -60,7 +60,7 @@ jobs:
           # Welche Hauptsektionen sollen angezeigt werden? (Komma-getrennt)
           # Verfügbare Sektionen: header, activity, community, repositories.list, code, lines, traffic,
           # languages, followup, discussions, notable, people.followers, people.following, etc.
-          base: header, activity, community, repositories.list, code, lines, traffic, languages, followup, people.followers
+          base: header, activity, community, languages, lines, repositories.list, notable, gists, traffic, isocalendar, habits, reactions, followup, achievements, people, tweets, anilist
 
           # Zeitzone für Datums- und Zeitangaben (z.B. Europe/Berlin, America/New_York)
           config_timezone: Europe/Berlin
@@ -121,7 +121,7 @@ jobs:
           plugin_people: yes
           plugin_people_types: followers       # Angezeigte Typen (followers, following, starred)
           plugin_people_limit: 24              # Max. Anzahl Personen
-          plugin_people_size: 28               # Avatar-Größe in Pixeln
+          plugin_people_size: 64               # Avatar-Größe in Pixeln
           plugin_people_shuffle: yes           # Reihenfolge zufällig mischen?
 
           # Star List (über das Repositories Plugin)
@@ -139,7 +139,7 @@ jobs:
           # Zeigt Repositories an, zu denen du signifikant beigetragen hast (außer deinen eigenen)
           plugin_notable: yes
           plugin_notable_limit: 3              # Max. Anzahl anzuzeigender Beiträge
-          # plugin_notable_repositories: yes   # Auch eigene Repos anzeigen, wenn Beiträge von anderen kamen? (Standard: no)
+          plugin_notable_repositories: yes   # Auch eigene Repos anzeigen, wenn Beiträge von anderen kamen? (Standard: no)
 
           # Gists Plugin
           # Zeigt deine neuesten öffentlichen Gists an
@@ -160,7 +160,7 @@ jobs:
           plugin_achievements: yes
           plugin_achievements_threshold: C     # Mindest-Rang des Achievements (X, S, A, B, C)
           plugin_achievements_secrets: yes     # Auch "geheime" Achievements anzeigen? (z.B. Pair Extraordinaire)
-          plugin_achievements_display: compact # Anzeigeart (compact, detailed)
+          plugin_achievements_display: detailed # Anzeigeart (compact, detailed)
           # plugin_achievements_limit: 0       # Limit der Achievements (0 = unbegrenzt)
 
           # Latest Tweets Plugin
@@ -175,7 +175,7 @@ jobs:
           plugin_anilist: yes
           plugin_anilist_user: mrunknownde # Ersetze dies mit deinem AniList-Benutzernamen
           plugin_anilist_limit: 5              # Max. Anzahl anzuzeigender Einträge (Anime/Manga)
-          plugin_anilist_sections: watching, reading # Welche Sektionen anzeigen? (watching, reading, completed, etc.)
+          plugin_anilist_sections: watching, completed, reading # Welche Sektionen anzeigen? (watching, reading, completed, etc.)
           # plugin_anilist_media: anime, manga # Welche Medientypen anzeigen? (anime, manga) - Standard ist oft beides
 
 
@@ -191,7 +191,7 @@ jobs:
           output_action: commit
 
           # Optionale Commit-Nachricht (Standard ist "chore: update metrics")
-          commit_message: "docs: update profile metrics"
+          commit_message: "[CRON] update profile metrics"
 
           # Optionaler Commit-Autor (Standard ist der GitHub Actions Bot)
           # commit_author: Your Name <your-email@example.com>
