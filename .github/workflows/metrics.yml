@@ -124,10 +124,12 @@ jobs:
           plugin_people_size: 28               # Avatar-Größe in Pixeln
           plugin_people_shuffle: yes           # Reihenfolge zufällig mischen?
 
-          # Repositories-Plugin
-          plugin_repositories: yes
-          plugin_repositories_order: featured, pinned, starred, random # Reihenfolge der Repos
-          plugin_repositories_limit: 4         # Limit für angezeigte Repos in der Liste
+          # Star List (über das Repositories Plugin)
+          # Zeigt eine Liste deiner Repositories, inklusive der, die du mit Stern markiert hast.
+          # Stelle sicher, dass 'starred' in 'plugin_repositories_order' enthalten ist.
+          plugin_repositories: yes             # Muss aktiviert sein
+          plugin_repositories_order: featured, pinned, starred, random # Füge 'starred' hinzu oder behalte es bei
+          plugin_repositories_limit: 6         # Passe das Limit für die angezeigte Repo-Liste an
 
           # Stargazers-Plugin (zeigt einen Graph der Sterne über Zeit)
           plugin_stargazers: no
@@ -159,13 +161,6 @@ jobs:
           plugin_tweets_user: mrunknownde # Ersetze dies mit deinem Twitter-Benutzernamen (ohne @)
           plugin_tweets_token: ${{ secrets.TWITTER_TOKEN }} # Dein Twitter Bearer Token Secret
           plugin_tweets_limit: 3               # Max. Anzahl anzuzeigender Tweets
-
-          # Star List (über das Repositories Plugin)
-          # Zeigt eine Liste deiner Repositories, inklusive der, die du mit Stern markiert hast.
-          # Stelle sicher, dass 'starred' in 'plugin_repositories_order' enthalten ist.
-          plugin_repositories: yes             # Muss aktiviert sein
-          plugin_repositories_order: featured, pinned, starred, random # Füge 'starred' hinzu oder behalte es bei
-          plugin_repositories_limit: 6         # Passe das Limit für die angezeigte Repo-Liste an
 
           # Reactions Plugin
           # Zeigt eine Zusammenfassung der Reaktionen auf deine Issues, PRs und Kommentare
